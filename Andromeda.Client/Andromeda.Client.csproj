@@ -92,6 +92,7 @@
       <DependentUpon>app.ts</DependentUpon>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="Resources\Images\Icons\feclaabajo.png" />
     <Content Include="Resources\Images\Icons\Left.png" />
     <Content Include="Resources\Images\Icons\Right.png" />
     <Content Include="Resources\Images\Logos\ConsultaLogo200x178.png" />

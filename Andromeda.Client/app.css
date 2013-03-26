@@ -1,8 +1,136 @@
-﻿body
+﻿/*#region Global style */
+@font-face
 {
-    font-family: 'Segoe UI', sans-serif
+    font-family: 'Segoe UI';
+    src: url('Resources/Fonts/segoeuib.eot');
+    src: local('Segoe UI') url('Resources/Fonts/segoeuib.ttf') format('truetype');
 }
 
-span {
-    font-style: italic
+@font-face
+{
+    font-family: 'Tempus Sans ITC';
+    src: url('Resources/Fonts/TEMPSITC.eot');
+    src: local('Tempus Sans ITC') url('Resources/Fonts/TEMPSITC.ttf') format('truetype');
 }
+
+*
+{
+    margin:0px;
+    padding:0px;
+}
+
+/*#region IconControl Style */
+.IconControl
+{
+    height:100%;
+    display:block;
+    text-decoration:none;
+    font-family:'Segoe UI';
+    font-weight:bold;
+    color:white;
+    font-size:12px;
+    margin-right:15px;
+}
+
+    .IconControl > div
+    {
+        display:table;
+    }
+
+        .IconControl > div > div
+        {
+            display:table-row;
+        }
+
+            .IconControl > div > div > *
+            {
+                display:table-cell;
+                vertical-align:middle;
+            }
+
+            .IconControl > div > div > img
+            {
+                width:30px;
+            }
+
+
+/*#endregion */
+
+/*#endregion */
+
+/*#region Header Style */
+header
+{
+    background-color:#00AFF0;
+}
+
+    header > div
+    {
+        display:table;
+        width:100%;
+    }
+
+        header > div > div
+        {
+            display:table-row;
+        }
+
+            header > div > div > div
+            {
+                display:table-cell;
+                vertical-align:middle;
+            }
+
+#ContentLogo
+{
+    width:200px;
+    border-right:solid 2px #fff;
+    padding-bottom:5px;
+}
+
+#MasterLogo
+{
+    height: 80px;
+    margin:auto;
+    display:block;
+    position:relative;
+    left:-20px;
+    cursor:pointer;
+}
+
+#ContentControls > div
+{
+    display:table;
+    height:100%;
+    width:100%;
+}
+
+    #ContentControls > div > div
+    {
+        display: table-row;
+        height: 100%;
+        width: 100%;
+    }
+
+        #ContentControls > div > div > div
+        {
+            display:table-cell;
+            height:100%;
+            vertical-align:middle;
+        }
+
+#ControlLeft
+{
+    width:90%;
+}
+
+#BtnOpenApps
+{
+    height:30px;
+    width:30px;
+    cursor:pointer;
+    position:relative;
+    left:15px;
+}
+
+/*#endregion */

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="854b5c2d159644349358608f55bce317" Name="Diagram1">
+        <EntityTypeShape EntityType="SuiteModel.Archivador" Width="1.875" PointX="7.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_ArchvdorVncldo" Width="1.5" PointX="9.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_ArchvdresGrpo" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.ArchivadoresUsuario" Width="1.5" PointX="9.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_CmpoArchvdorVncldo" Width="1.5" PointX="12" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_PrmsoCmpo" Width="1.5" PointX="12.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_SbCnfigDcwre" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_SbCnfigMcrclsaDcments" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mci_SbCnfigShrePoint" Width="1.5" PointX="3" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.TipoArchivador" Width="1.5" PointX="5.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_AplccionUsrio" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_CCsto" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Cdad" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Dpndncia" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Dprtmnto" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Emprsa" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Grpo" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_GrpoUsrio" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_MdloAplccion" Width="1.5" PointX="12" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_MdloUsrio" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Pais" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_SbDpndncia" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_Scrsal" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_ScrslesUsrio" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_SgntreUsrio" Width="1.5" PointX="9.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.mcu_TpoIdntfccion" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuiteModel.Usuario" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_Archivador_MCCI_TipoArchivador" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_ArchivadoresGrupo_MCCI_Archivador" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_ArchivadoresUsuario_MCCI_Archivador" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_PermisoCampo_MCCI_Archivador" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_mci_ArchvdorVncldo_mci_Archvdor" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_mcg_MdloAplccion_mcg_AplccionUsrio" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Usuario_MCU_CentroDeCosto" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Ciudad_MCU_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_SysMCU_Sucursal_SysMCU_Ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Dependencia_MCU_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_SubDependencia_MCU_Dependencia" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Departamento_MCU_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Usuario_MCU_SubDependencia" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_SucursalesUsuario_MCU_Sucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_mcu_ScrslesUsrio_mcu_Usrio" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_mcu_SgntreUsrio_mcu_Usrio" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Usuario_MCU_TipoIdentificacion" ManuallyRouted="false" />
+        <AssociationConnector Association="SuiteModel.FK_MCU_Usuario_MCU_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

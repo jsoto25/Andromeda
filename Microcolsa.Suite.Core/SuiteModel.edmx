@@ -1,0 +1,1819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SuiteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SuiteModelStoreContainer">
+          <EntitySet Name="mci_Archvdor" EntityType="SuiteModel.Store.mci_Archvdor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_ArchvdorVncldo" EntityType="SuiteModel.Store.mci_ArchvdorVncldo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_ArchvdresGrpo" EntityType="SuiteModel.Store.mci_ArchvdresGrpo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_ArchvdresUsrio" EntityType="SuiteModel.Store.mci_ArchvdresUsrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_CmpoArchvdorVncldo" EntityType="SuiteModel.Store.mci_CmpoArchvdorVncldo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_PrmsoCmpo" EntityType="SuiteModel.Store.mci_PrmsoCmpo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_SbCnfigDcwre" EntityType="SuiteModel.Store.mci_SbCnfigDcwre" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_SbCnfigMcrclsaDcments" EntityType="SuiteModel.Store.mci_SbCnfigMcrclsaDcments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_SbCnfigShrePoint" EntityType="SuiteModel.Store.mci_SbCnfigShrePoint" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mci_TpoArchvdor" EntityType="SuiteModel.Store.mci_TpoArchvdor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_AplccionUsrio" EntityType="SuiteModel.Store.mcu_AplccionUsrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_CCsto" EntityType="SuiteModel.Store.mcu_CCsto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Cdad" EntityType="SuiteModel.Store.mcu_Cdad" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Dpndncia" EntityType="SuiteModel.Store.mcu_Dpndncia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Dprtmnto" EntityType="SuiteModel.Store.mcu_Dprtmnto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Emprsa" EntityType="SuiteModel.Store.mcu_Emprsa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Grpo" EntityType="SuiteModel.Store.mcu_Grpo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_GrpoUsrio" EntityType="SuiteModel.Store.mcu_GrpoUsrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_MdloAplccion" EntityType="SuiteModel.Store.mcu_MdloAplccion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_MdloUsrio" EntityType="SuiteModel.Store.mcu_MdloUsrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Pais" EntityType="SuiteModel.Store.mcu_Pais" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_SbDpndncia" EntityType="SuiteModel.Store.mcu_SbDpndncia" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Scrsal" EntityType="SuiteModel.Store.mcu_Scrsal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_ScrslesUsrio" EntityType="SuiteModel.Store.mcu_ScrslesUsrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_SgntreUsrio" EntityType="SuiteModel.Store.mcu_SgntreUsrio" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_TpoIdntfccion" EntityType="SuiteModel.Store.mcu_TpoIdntfccion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="mcu_Usrio" EntityType="SuiteModel.Store.mcu_Usrio" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_MCCI_Archivador_MCCI_TipoArchivador" Association="SuiteModel.Store.FK_MCCI_Archivador_MCCI_TipoArchivador">
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresGrupo_MCCI_Archivador" Association="SuiteModel.Store.FK_MCCI_ArchivadoresGrupo_MCCI_Archivador">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_ArchvdresGrpo" EntitySet="mci_ArchvdresGrpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo" Association="SuiteModel.Store.FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo">
+            <End Role="mcu_Grpo" EntitySet="mcu_Grpo" />
+            <End Role="mci_ArchvdresGrpo" EntitySet="mci_ArchvdresGrpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresUsuario_MCCI_Archivador" Association="SuiteModel.Store.FK_MCCI_ArchivadoresUsuario_MCCI_Archivador">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_ArchvdresUsrio" EntitySet="mci_ArchvdresUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario" Association="SuiteModel.Store.FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mci_ArchvdresUsrio" EntitySet="mci_ArchvdresUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_PermisoCampo_MCCI_Archivador" Association="SuiteModel.Store.FK_MCCI_PermisoCampo_MCCI_Archivador">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_PrmsoCmpo" EntitySet="mci_PrmsoCmpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_PermisoCampo_SysMCU_Grupo" Association="SuiteModel.Store.FK_MCCI_PermisoCampo_SysMCU_Grupo">
+            <End Role="mcu_Grpo" EntitySet="mcu_Grpo" />
+            <End Role="mci_PrmsoCmpo" EntitySet="mci_PrmsoCmpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_PermisoCampo_SysMCU_Usuario" Association="SuiteModel.Store.FK_MCCI_PermisoCampo_SysMCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mci_PrmsoCmpo" EntitySet="mci_PrmsoCmpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware" Association="SuiteModel.Store.FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware">
+            <End Role="mci_SbCnfigDcwre" EntitySet="mci_SbCnfigDcwre" />
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments" Association="SuiteModel.Store.FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments">
+            <End Role="mci_SbCnfigMcrclsaDcments" EntitySet="mci_SbCnfigMcrclsaDcments" />
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint" Association="SuiteModel.Store.FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint">
+            <End Role="mci_SbCnfigShrePoint" EntitySet="mci_SbCnfigShrePoint" />
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mcg_MdloAplccion_mcg_AplccionUsrio" Association="SuiteModel.Store.FK_mcg_MdloAplccion_mcg_AplccionUsrio">
+            <End Role="mcu_AplccionUsrio" EntitySet="mcu_AplccionUsrio" />
+            <End Role="mcu_MdloAplccion" EntitySet="mcu_MdloAplccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mci_ArchvdorVncldo_mci_Archvdor" Association="SuiteModel.Store.FK_mci_ArchvdorVncldo_mci_Archvdor">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_ArchvdorVncldo" EntitySet="mci_ArchvdorVncldo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo" Association="SuiteModel.Store.FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo">
+            <End Role="mci_ArchvdorVncldo" EntitySet="mci_ArchvdorVncldo" />
+            <End Role="mci_CmpoArchvdorVncldo" EntitySet="mci_CmpoArchvdorVncldo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Ciudad_MCU_Departamento" Association="SuiteModel.Store.FK_MCU_Ciudad_MCU_Departamento">
+            <End Role="mcu_Dprtmnto" EntitySet="mcu_Dprtmnto" />
+            <End Role="mcu_Cdad" EntitySet="mcu_Cdad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Departamento_MCU_Pais" Association="SuiteModel.Store.FK_MCU_Departamento_MCU_Pais">
+            <End Role="mcu_Pais" EntitySet="mcu_Pais" />
+            <End Role="mcu_Dprtmnto" EntitySet="mcu_Dprtmnto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Dependencia_MCU_Empresa" Association="SuiteModel.Store.FK_MCU_Dependencia_MCU_Empresa">
+            <End Role="mcu_Emprsa" EntitySet="mcu_Emprsa" />
+            <End Role="mcu_Dpndncia" EntitySet="mcu_Dpndncia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mcu_ScrslesUsrio_mcu_Usrio" Association="SuiteModel.Store.FK_mcu_ScrslesUsrio_mcu_Usrio">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_ScrslesUsrio" EntitySet="mcu_ScrslesUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mcu_SgntreUsrio_mcu_Usrio" Association="SuiteModel.Store.FK_mcu_SgntreUsrio_mcu_Usrio">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_SgntreUsrio" EntitySet="mcu_SgntreUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_SubDependencia_MCU_Dependencia" Association="SuiteModel.Store.FK_MCU_SubDependencia_MCU_Dependencia">
+            <End Role="mcu_Dpndncia" EntitySet="mcu_Dpndncia" />
+            <End Role="mcu_SbDpndncia" EntitySet="mcu_SbDpndncia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_SucursalesUsuario_MCU_Sucursal" Association="SuiteModel.Store.FK_MCU_SucursalesUsuario_MCU_Sucursal">
+            <End Role="mcu_Scrsal" EntitySet="mcu_Scrsal" />
+            <End Role="mcu_ScrslesUsrio" EntitySet="mcu_ScrslesUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_CentroDeCosto" Association="SuiteModel.Store.FK_MCU_Usuario_MCU_CentroDeCosto">
+            <End Role="mcu_CCsto" EntitySet="mcu_CCsto" />
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_SubDependencia" Association="SuiteModel.Store.FK_MCU_Usuario_MCU_SubDependencia">
+            <End Role="mcu_SbDpndncia" EntitySet="mcu_SbDpndncia" />
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_TipoIdentificacion" Association="SuiteModel.Store.FK_MCU_Usuario_MCU_TipoIdentificacion">
+            <End Role="mcu_TpoIdntfccion" EntitySet="mcu_TpoIdntfccion" />
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_Usuario" Association="SuiteModel.Store.FK_MCU_Usuario_MCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_Usrio1" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SysMCU_GruposUsuario_SysMCU_Grupo" Association="SuiteModel.Store.FK_SysMCU_GruposUsuario_SysMCU_Grupo">
+            <End Role="mcu_Grpo" EntitySet="mcu_Grpo" />
+            <End Role="mcu_GrpoUsrio" EntitySet="mcu_GrpoUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SysMCU_GruposUsuario_SysMCU_Usuario" Association="SuiteModel.Store.FK_SysMCU_GruposUsuario_SysMCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_GrpoUsrio" EntitySet="mcu_GrpoUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SysMCU_Sucursal_SysMCU_Ciudad" Association="SuiteModel.Store.FK_SysMCU_Sucursal_SysMCU_Ciudad">
+            <End Role="mcu_Cdad" EntitySet="mcu_Cdad" />
+            <End Role="mcu_Scrsal" EntitySet="mcu_Scrsal" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="mci_Archvdor">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdTpoArchvdor" Type="int" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="strTtloArchvdor" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="strFrmtoFchaEntrda" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="strFrmtoFchaSlda" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="intMstrarFrmlrioCnslta" Type="tinyint" Nullable="false" />
+          <Property Name="strCmpoOrdncion" Type="varchar(max)" />
+          <Property Name="strQryAdcnal" Type="varchar(max)" />
+          <Property Name="strLstaCmposSbCnslta" Type="varchar(max)" />
+          <Property Name="strQryAdcnalSbCnslta" Type="varchar(max)" />
+          <Property Name="strCmposOcltar" Type="varchar(max)" />
+          <Property Name="strCmposOcltarFrmlrio" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="mci_ArchvdorVncldo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdCnfgrcion" Type="int" Nullable="false" />
+          <Property Name="intIdArchvdorPdre" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mci_ArchvdresGrpo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdArchvdor" Type="int" Nullable="false" />
+          <Property Name="intIdGrpo" Type="int" Nullable="false" />
+          <Property Name="intHbltdo" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mci_ArchvdresUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdArchvdor" Type="int" Nullable="false" />
+          <Property Name="intIdUsrio" Type="int" Nullable="false" />
+          <Property Name="intHbltdo" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mci_CmpoArchvdorVncldo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdCnfgrcion" Type="int" Nullable="false" />
+          <Property Name="intIdArchvdorVncldo" Type="int" Nullable="false" />
+          <Property Name="strCmpoPdre" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="strCmpoVncldo" Type="varchar" Nullable="false" MaxLength="55" />
+        </EntityType>
+        <EntityType Name="mci_PrmsoCmpo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdUsrio" Type="int" />
+          <Property Name="intIdGrpo" Type="int" />
+          <Property Name="intIdArchvdor" Type="int" Nullable="false" />
+          <Property Name="strCmpo" Type="varchar" Nullable="false" MaxLength="55" />
+          <Property Name="strCndcnal" Type="varchar(max)" Nullable="false" />
+          <Property Name="strValor" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mci_SbCnfigDcwre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strOrgnzcion" Type="varchar(max)" Nullable="false" />
+          <Property Name="strSrvdor" Type="varchar(max)" Nullable="false" />
+          <Property Name="intPrto" Type="int" Nullable="false" />
+          <Property Name="strUsrio" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strCntrsna" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="mci_SbCnfigMcrclsaDcments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="mci_SbCnfigShrePoint">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="mci_TpoArchvdor">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IdSbCnfgrcion" Type="int" Nullable="false" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strDscrpcion" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="mcu_AplccionUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" />
+          <Property Name="Aplicacion" Type="binary" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="mcu_CCsto">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strCdgo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="mcu_Cdad">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdDprtmnto" Type="int" Nullable="false" />
+          <Property Name="strCdgo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="mcu_Dpndncia">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdEmprsa" Type="int" Nullable="false" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="mcu_Dprtmnto">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdPais" Type="int" Nullable="false" />
+          <Property Name="strCdgo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="mcu_Emprsa">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strNit" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="strNmbre" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mcu_Grpo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="strDscrpcion" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="mcu_GrpoUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdGrpo" Type="int" Nullable="false" />
+          <Property Name="intIdUsrio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mcu_MdloAplccion">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" />
+          <Property Name="intIdAplccion" Type="int" />
+          <Property Name="strNmbre" Type="varchar" MaxLength="50" />
+          <Property Name="strDscrpcion" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="mcu_MdloUsrio">
+          <Key>
+            <PropertyRef Name="intIdUrio" />
+          </Key>
+          <Property Name="intIdUrio" Type="int" Nullable="false" />
+          <Property Name="Modulos" Type="binary" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="mcu_Pais">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strCdgo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="mcu_SbDpndncia">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdDpndncia" Type="int" Nullable="false" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="mcu_Scrsal">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdCdad" Type="int" Nullable="false" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="mcu_ScrslesUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdUsrio" Type="int" Nullable="false" />
+          <Property Name="intIdScrsal" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mcu_SgntreUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="intIdUsrio" Type="int" Nullable="false" />
+          <Property Name="blobSgntre" Type="image" Nullable="false" />
+        </EntityType>
+        <EntityType Name="mcu_TpoIdntfccion">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="strDscrpcion" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="mcu_Usrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strLgin" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="strCntrsna" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="strNmbre" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="intIdTpoIdntfccion" Type="int" />
+          <Property Name="strIdntfccion" Type="varchar" MaxLength="50" />
+          <Property Name="dtFchaNcmnto" Type="datetime" />
+          <Property Name="strEmail" Type="varchar" MaxLength="200" />
+          <Property Name="strTlfno" Type="varchar" MaxLength="20" />
+          <Property Name="strCrgo" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="intIdSbDpndncia" Type="int" />
+          <Property Name="intIdCntroDCsto" Type="int" />
+          <Property Name="intIdUsrioJfe" Type="int" />
+        </EntityType>
+        <Association Name="FK_MCCI_Archivador_MCCI_TipoArchivador">
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.Store.mci_TpoArchvdor" Multiplicity="0..1" />
+          <End Role="mci_Archvdor" Type="SuiteModel.Store.mci_Archvdor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_TpoArchvdor">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_Archvdor">
+              <PropertyRef Name="intIdTpoArchvdor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresGrupo_MCCI_Archivador">
+          <End Role="mci_Archvdor" Type="SuiteModel.Store.mci_Archvdor" Multiplicity="1" />
+          <End Role="mci_ArchvdresGrpo" Type="SuiteModel.Store.mci_ArchvdresGrpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresGrpo">
+              <PropertyRef Name="intIdArchvdor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo">
+          <End Role="mcu_Grpo" Type="SuiteModel.Store.mcu_Grpo" Multiplicity="1" />
+          <End Role="mci_ArchvdresGrpo" Type="SuiteModel.Store.mci_ArchvdresGrpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Grpo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresGrpo">
+              <PropertyRef Name="intIdGrpo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresUsuario_MCCI_Archivador">
+          <End Role="mci_Archvdor" Type="SuiteModel.Store.mci_Archvdor" Multiplicity="1" />
+          <End Role="mci_ArchvdresUsrio" Type="SuiteModel.Store.mci_ArchvdresUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresUsrio">
+              <PropertyRef Name="intIdArchvdor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="1" />
+          <End Role="mci_ArchvdresUsrio" Type="SuiteModel.Store.mci_ArchvdresUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresUsrio">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_PermisoCampo_MCCI_Archivador">
+          <End Role="mci_Archvdor" Type="SuiteModel.Store.mci_Archvdor" Multiplicity="1" />
+          <End Role="mci_PrmsoCmpo" Type="SuiteModel.Store.mci_PrmsoCmpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_PrmsoCmpo">
+              <PropertyRef Name="intIdArchvdor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_PermisoCampo_SysMCU_Grupo">
+          <End Role="mcu_Grpo" Type="SuiteModel.Store.mcu_Grpo" Multiplicity="0..1" />
+          <End Role="mci_PrmsoCmpo" Type="SuiteModel.Store.mci_PrmsoCmpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Grpo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_PrmsoCmpo">
+              <PropertyRef Name="intIdGrpo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_PermisoCampo_SysMCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="0..1" />
+          <End Role="mci_PrmsoCmpo" Type="SuiteModel.Store.mci_PrmsoCmpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_PrmsoCmpo">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware">
+          <End Role="mci_SbCnfigDcwre" Type="SuiteModel.Store.mci_SbCnfigDcwre" Multiplicity="1" />
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.Store.mci_TpoArchvdor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_SbCnfigDcwre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_TpoArchvdor">
+              <PropertyRef Name="IdSbCnfgrcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments">
+          <End Role="mci_SbCnfigMcrclsaDcments" Type="SuiteModel.Store.mci_SbCnfigMcrclsaDcments" Multiplicity="1" />
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.Store.mci_TpoArchvdor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_SbCnfigMcrclsaDcments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_TpoArchvdor">
+              <PropertyRef Name="IdSbCnfgrcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint">
+          <End Role="mci_SbCnfigShrePoint" Type="SuiteModel.Store.mci_SbCnfigShrePoint" Multiplicity="1" />
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.Store.mci_TpoArchvdor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_SbCnfigShrePoint">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_TpoArchvdor">
+              <PropertyRef Name="IdSbCnfgrcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mcg_MdloAplccion_mcg_AplccionUsrio">
+          <End Role="mcu_AplccionUsrio" Type="SuiteModel.Store.mcu_AplccionUsrio" Multiplicity="0..1" />
+          <End Role="mcu_MdloAplccion" Type="SuiteModel.Store.mcu_MdloAplccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_AplccionUsrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_MdloAplccion">
+              <PropertyRef Name="intIdAplccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mci_ArchvdorVncldo_mci_Archvdor">
+          <End Role="mci_Archvdor" Type="SuiteModel.Store.mci_Archvdor" Multiplicity="1" />
+          <End Role="mci_ArchvdorVncldo" Type="SuiteModel.Store.mci_ArchvdorVncldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_ArchvdorVncldo">
+              <PropertyRef Name="intIdArchvdorPdre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo">
+          <End Role="mci_ArchvdorVncldo" Type="SuiteModel.Store.mci_ArchvdorVncldo" Multiplicity="1" />
+          <End Role="mci_CmpoArchvdorVncldo" Type="SuiteModel.Store.mci_CmpoArchvdorVncldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_ArchvdorVncldo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_CmpoArchvdorVncldo">
+              <PropertyRef Name="intIdCnfgrcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Ciudad_MCU_Departamento">
+          <End Role="mcu_Dprtmnto" Type="SuiteModel.Store.mcu_Dprtmnto" Multiplicity="1" />
+          <End Role="mcu_Cdad" Type="SuiteModel.Store.mcu_Cdad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Dprtmnto">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Cdad">
+              <PropertyRef Name="intIdDprtmnto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Departamento_MCU_Pais">
+          <End Role="mcu_Pais" Type="SuiteModel.Store.mcu_Pais" Multiplicity="1" />
+          <End Role="mcu_Dprtmnto" Type="SuiteModel.Store.mcu_Dprtmnto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Pais">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Dprtmnto">
+              <PropertyRef Name="intIdPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Dependencia_MCU_Empresa">
+          <End Role="mcu_Emprsa" Type="SuiteModel.Store.mcu_Emprsa" Multiplicity="1" />
+          <End Role="mcu_Dpndncia" Type="SuiteModel.Store.mcu_Dpndncia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Emprsa">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Dpndncia">
+              <PropertyRef Name="intIdEmprsa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mcu_ScrslesUsrio_mcu_Usrio">
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="1" />
+          <End Role="mcu_ScrslesUsrio" Type="SuiteModel.Store.mcu_ScrslesUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_ScrslesUsrio">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mcu_SgntreUsrio_mcu_Usrio">
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="1" />
+          <End Role="mcu_SgntreUsrio" Type="SuiteModel.Store.mcu_SgntreUsrio" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_SgntreUsrio">
+              <PropertyRef Name="intId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_SubDependencia_MCU_Dependencia">
+          <End Role="mcu_Dpndncia" Type="SuiteModel.Store.mcu_Dpndncia" Multiplicity="1" />
+          <End Role="mcu_SbDpndncia" Type="SuiteModel.Store.mcu_SbDpndncia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Dpndncia">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_SbDpndncia">
+              <PropertyRef Name="intIdDpndncia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_SucursalesUsuario_MCU_Sucursal">
+          <End Role="mcu_Scrsal" Type="SuiteModel.Store.mcu_Scrsal" Multiplicity="1" />
+          <End Role="mcu_ScrslesUsrio" Type="SuiteModel.Store.mcu_ScrslesUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Scrsal">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_ScrslesUsrio">
+              <PropertyRef Name="intIdScrsal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_CentroDeCosto">
+          <End Role="mcu_CCsto" Type="SuiteModel.Store.mcu_CCsto" Multiplicity="0..1" />
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_CCsto">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio">
+              <PropertyRef Name="intIdCntroDCsto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_SubDependencia">
+          <End Role="mcu_SbDpndncia" Type="SuiteModel.Store.mcu_SbDpndncia" Multiplicity="0..1" />
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_SbDpndncia">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio">
+              <PropertyRef Name="intIdSbDpndncia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_TipoIdentificacion">
+          <End Role="mcu_TpoIdntfccion" Type="SuiteModel.Store.mcu_TpoIdntfccion" Multiplicity="0..1" />
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_TpoIdntfccion">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio">
+              <PropertyRef Name="intIdTpoIdntfccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="0..1" />
+          <End Role="mcu_Usrio1" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio1">
+              <PropertyRef Name="intIdUsrioJfe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SysMCU_GruposUsuario_SysMCU_Grupo">
+          <End Role="mcu_Grpo" Type="SuiteModel.Store.mcu_Grpo" Multiplicity="1" />
+          <End Role="mcu_GrpoUsrio" Type="SuiteModel.Store.mcu_GrpoUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Grpo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_GrpoUsrio">
+              <PropertyRef Name="intIdGrpo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SysMCU_GruposUsuario_SysMCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Store.mcu_Usrio" Multiplicity="1" />
+          <End Role="mcu_GrpoUsrio" Type="SuiteModel.Store.mcu_GrpoUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_GrpoUsrio">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SysMCU_Sucursal_SysMCU_Ciudad">
+          <End Role="mcu_Cdad" Type="SuiteModel.Store.mcu_Cdad" Multiplicity="1" />
+          <End Role="mcu_Scrsal" Type="SuiteModel.Store.mcu_Scrsal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Cdad">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Scrsal">
+              <PropertyRef Name="intIdCdad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SuiteModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SuiteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="mci_Archvdor" EntityType="SuiteModel.Archivador" />
+          <EntitySet Name="mci_ArchvdorVncldo" EntityType="SuiteModel.mci_ArchvdorVncldo" />
+          <EntitySet Name="mci_ArchvdresGrpo" EntityType="SuiteModel.mci_ArchvdresGrpo" />
+          <EntitySet Name="mci_ArchvdresUsrio" EntityType="SuiteModel.ArchivadoresUsuario" />
+          <EntitySet Name="mci_CmpoArchvdorVncldo" EntityType="SuiteModel.mci_CmpoArchvdorVncldo" />
+          <EntitySet Name="mci_PrmsoCmpo" EntityType="SuiteModel.mci_PrmsoCmpo" />
+          <EntitySet Name="mci_SbCnfigDcwre" EntityType="SuiteModel.mci_SbCnfigDcwre" />
+          <EntitySet Name="mci_SbCnfigMcrclsaDcments" EntityType="SuiteModel.mci_SbCnfigMcrclsaDcments" />
+          <EntitySet Name="mci_SbCnfigShrePoint" EntityType="SuiteModel.mci_SbCnfigShrePoint" />
+          <EntitySet Name="mci_TpoArchvdor" EntityType="SuiteModel.TipoArchivador" />
+          <EntitySet Name="mcu_AplccionUsrio" EntityType="SuiteModel.mcu_AplccionUsrio" />
+          <EntitySet Name="mcu_CCsto" EntityType="SuiteModel.mcu_CCsto" />
+          <EntitySet Name="mcu_Cdad" EntityType="SuiteModel.mcu_Cdad" />
+          <EntitySet Name="mcu_Dpndncia" EntityType="SuiteModel.mcu_Dpndncia" />
+          <EntitySet Name="mcu_Dprtmnto" EntityType="SuiteModel.mcu_Dprtmnto" />
+          <EntitySet Name="mcu_Emprsa" EntityType="SuiteModel.mcu_Emprsa" />
+          <EntitySet Name="mcu_Grpo" EntityType="SuiteModel.mcu_Grpo" />
+          <EntitySet Name="mcu_GrpoUsrio" EntityType="SuiteModel.mcu_GrpoUsrio" />
+          <EntitySet Name="mcu_MdloAplccion" EntityType="SuiteModel.mcu_MdloAplccion" />
+          <EntitySet Name="mcu_MdloUsrio" EntityType="SuiteModel.mcu_MdloUsrio" />
+          <EntitySet Name="mcu_Pais" EntityType="SuiteModel.mcu_Pais" />
+          <EntitySet Name="mcu_SbDpndncia" EntityType="SuiteModel.mcu_SbDpndncia" />
+          <EntitySet Name="mcu_Scrsal" EntityType="SuiteModel.mcu_Scrsal" />
+          <EntitySet Name="mcu_ScrslesUsrio" EntityType="SuiteModel.mcu_ScrslesUsrio" />
+          <EntitySet Name="mcu_SgntreUsrio" EntityType="SuiteModel.mcu_SgntreUsrio" />
+          <EntitySet Name="mcu_TpoIdntfccion" EntityType="SuiteModel.mcu_TpoIdntfccion" />
+          <EntitySet Name="mcu_Usrio" EntityType="SuiteModel.Usuario" />
+          <AssociationSet Name="FK_MCCI_Archivador_MCCI_TipoArchivador" Association="SuiteModel.FK_MCCI_Archivador_MCCI_TipoArchivador">
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresGrupo_MCCI_Archivador" Association="SuiteModel.FK_MCCI_ArchivadoresGrupo_MCCI_Archivador">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_ArchvdresGrpo" EntitySet="mci_ArchvdresGrpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresUsuario_MCCI_Archivador" Association="SuiteModel.FK_MCCI_ArchivadoresUsuario_MCCI_Archivador">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_ArchvdresUsrio" EntitySet="mci_ArchvdresUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_PermisoCampo_MCCI_Archivador" Association="SuiteModel.FK_MCCI_PermisoCampo_MCCI_Archivador">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_PrmsoCmpo" EntitySet="mci_PrmsoCmpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mci_ArchvdorVncldo_mci_Archvdor" Association="SuiteModel.FK_mci_ArchvdorVncldo_mci_Archvdor">
+            <End Role="mci_Archvdor" EntitySet="mci_Archvdor" />
+            <End Role="mci_ArchvdorVncldo" EntitySet="mci_ArchvdorVncldo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo" Association="SuiteModel.FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo">
+            <End Role="mci_ArchvdorVncldo" EntitySet="mci_ArchvdorVncldo" />
+            <End Role="mci_CmpoArchvdorVncldo" EntitySet="mci_CmpoArchvdorVncldo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo" Association="SuiteModel.FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo">
+            <End Role="mcu_Grpo" EntitySet="mcu_Grpo" />
+            <End Role="mci_ArchvdresGrpo" EntitySet="mci_ArchvdresGrpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario" Association="SuiteModel.FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mci_ArchvdresUsrio" EntitySet="mci_ArchvdresUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_PermisoCampo_SysMCU_Grupo" Association="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Grupo">
+            <End Role="mcu_Grpo" EntitySet="mcu_Grpo" />
+            <End Role="mci_PrmsoCmpo" EntitySet="mci_PrmsoCmpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_PermisoCampo_SysMCU_Usuario" Association="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mci_PrmsoCmpo" EntitySet="mci_PrmsoCmpo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware" Association="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware">
+            <End Role="mci_SbCnfigDcwre" EntitySet="mci_SbCnfigDcwre" />
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments" Association="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments">
+            <End Role="mci_SbCnfigMcrclsaDcments" EntitySet="mci_SbCnfigMcrclsaDcments" />
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint" Association="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint">
+            <End Role="mci_SbCnfigShrePoint" EntitySet="mci_SbCnfigShrePoint" />
+            <End Role="mci_TpoArchvdor" EntitySet="mci_TpoArchvdor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mcg_MdloAplccion_mcg_AplccionUsrio" Association="SuiteModel.FK_mcg_MdloAplccion_mcg_AplccionUsrio">
+            <End Role="mcu_AplccionUsrio" EntitySet="mcu_AplccionUsrio" />
+            <End Role="mcu_MdloAplccion" EntitySet="mcu_MdloAplccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_CentroDeCosto" Association="SuiteModel.FK_MCU_Usuario_MCU_CentroDeCosto">
+            <End Role="mcu_CCsto" EntitySet="mcu_CCsto" />
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Ciudad_MCU_Departamento" Association="SuiteModel.FK_MCU_Ciudad_MCU_Departamento">
+            <End Role="mcu_Dprtmnto" EntitySet="mcu_Dprtmnto" />
+            <End Role="mcu_Cdad" EntitySet="mcu_Cdad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SysMCU_Sucursal_SysMCU_Ciudad" Association="SuiteModel.FK_SysMCU_Sucursal_SysMCU_Ciudad">
+            <End Role="mcu_Cdad" EntitySet="mcu_Cdad" />
+            <End Role="mcu_Scrsal" EntitySet="mcu_Scrsal" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Dependencia_MCU_Empresa" Association="SuiteModel.FK_MCU_Dependencia_MCU_Empresa">
+            <End Role="mcu_Emprsa" EntitySet="mcu_Emprsa" />
+            <End Role="mcu_Dpndncia" EntitySet="mcu_Dpndncia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_SubDependencia_MCU_Dependencia" Association="SuiteModel.FK_MCU_SubDependencia_MCU_Dependencia">
+            <End Role="mcu_Dpndncia" EntitySet="mcu_Dpndncia" />
+            <End Role="mcu_SbDpndncia" EntitySet="mcu_SbDpndncia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Departamento_MCU_Pais" Association="SuiteModel.FK_MCU_Departamento_MCU_Pais">
+            <End Role="mcu_Pais" EntitySet="mcu_Pais" />
+            <End Role="mcu_Dprtmnto" EntitySet="mcu_Dprtmnto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SysMCU_GruposUsuario_SysMCU_Grupo" Association="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Grupo">
+            <End Role="mcu_Grpo" EntitySet="mcu_Grpo" />
+            <End Role="mcu_GrpoUsrio" EntitySet="mcu_GrpoUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SysMCU_GruposUsuario_SysMCU_Usuario" Association="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_GrpoUsrio" EntitySet="mcu_GrpoUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_SubDependencia" Association="SuiteModel.FK_MCU_Usuario_MCU_SubDependencia">
+            <End Role="mcu_SbDpndncia" EntitySet="mcu_SbDpndncia" />
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_SucursalesUsuario_MCU_Sucursal" Association="SuiteModel.FK_MCU_SucursalesUsuario_MCU_Sucursal">
+            <End Role="mcu_Scrsal" EntitySet="mcu_Scrsal" />
+            <End Role="mcu_ScrslesUsrio" EntitySet="mcu_ScrslesUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mcu_ScrslesUsrio_mcu_Usrio" Association="SuiteModel.FK_mcu_ScrslesUsrio_mcu_Usrio">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_ScrslesUsrio" EntitySet="mcu_ScrslesUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_mcu_SgntreUsrio_mcu_Usrio" Association="SuiteModel.FK_mcu_SgntreUsrio_mcu_Usrio">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_SgntreUsrio" EntitySet="mcu_SgntreUsrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_TipoIdentificacion" Association="SuiteModel.FK_MCU_Usuario_MCU_TipoIdentificacion">
+            <End Role="mcu_TpoIdntfccion" EntitySet="mcu_TpoIdntfccion" />
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MCU_Usuario_MCU_Usuario" Association="SuiteModel.FK_MCU_Usuario_MCU_Usuario">
+            <End Role="mcu_Usrio" EntitySet="mcu_Usrio" />
+            <End Role="mcu_Usrio1" EntitySet="mcu_Usrio" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Archivador">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdTipoArchivador" Type="Int32" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="TituloArchivador" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="FormatoFechaEntrada" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="FormatoFechaSalida" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MostrarFormularioConsulta" Type="Byte" Nullable="false" />
+          <Property Name="CampoOrdenacion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="QueryAdicional" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ListaCamposSubconsulta" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="QueryAdicionalSubconsulta" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CamposOcultar" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CamposOcultarFormulario" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TipoArchivador" Relationship="SuiteModel.FK_MCCI_Archivador_MCCI_TipoArchivador" FromRole="mci_Archvdor" ToRole="mci_TpoArchvdor" />
+          <NavigationProperty Name="mci_ArchvdresGrpo" Relationship="SuiteModel.FK_MCCI_ArchivadoresGrupo_MCCI_Archivador" FromRole="mci_Archvdor" ToRole="mci_ArchvdresGrpo" />
+          <NavigationProperty Name="UsuariosArchivador" Relationship="SuiteModel.FK_MCCI_ArchivadoresUsuario_MCCI_Archivador" FromRole="mci_Archvdor" ToRole="mci_ArchvdresUsrio" />
+          <NavigationProperty Name="mci_PrmsoCmpo" Relationship="SuiteModel.FK_MCCI_PermisoCampo_MCCI_Archivador" FromRole="mci_Archvdor" ToRole="mci_PrmsoCmpo" />
+          <NavigationProperty Name="mci_ArchvdorVncldo" Relationship="SuiteModel.FK_mci_ArchvdorVncldo_mci_Archvdor" FromRole="mci_Archvdor" ToRole="mci_ArchvdorVncldo" />
+        </EntityType>
+        <EntityType Name="mci_ArchvdorVncldo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdCnfgrcion" Type="Int32" Nullable="false" />
+          <Property Name="intIdArchvdorPdre" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="mci_Archvdor" Relationship="SuiteModel.FK_mci_ArchvdorVncldo_mci_Archvdor" FromRole="mci_ArchvdorVncldo" ToRole="mci_Archvdor" />
+          <NavigationProperty Name="mci_CmpoArchvdorVncldo" Relationship="SuiteModel.FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo" FromRole="mci_ArchvdorVncldo" ToRole="mci_CmpoArchvdorVncldo" />
+        </EntityType>
+        <EntityType Name="mci_ArchvdresGrpo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdArchvdor" Type="Int32" Nullable="false" />
+          <Property Name="intIdGrpo" Type="Int32" Nullable="false" />
+          <Property Name="intHbltdo" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="mci_Archvdor" Relationship="SuiteModel.FK_MCCI_ArchivadoresGrupo_MCCI_Archivador" FromRole="mci_ArchvdresGrpo" ToRole="mci_Archvdor" />
+          <NavigationProperty Name="mcu_Grpo" Relationship="SuiteModel.FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo" FromRole="mci_ArchvdresGrpo" ToRole="mcu_Grpo" />
+        </EntityType>
+        <EntityType Name="ArchivadoresUsuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdArchivador" Type="Int32" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="Habilitado" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="Archivadores" Relationship="SuiteModel.FK_MCCI_ArchivadoresUsuario_MCCI_Archivador" FromRole="mci_ArchvdresUsrio" ToRole="mci_Archvdor" />
+          <NavigationProperty Name="Usuarios" Relationship="SuiteModel.FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario" FromRole="mci_ArchvdresUsrio" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mci_CmpoArchvdorVncldo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdCnfgrcion" Type="Int32" Nullable="false" />
+          <Property Name="intIdArchvdorVncldo" Type="Int32" Nullable="false" />
+          <Property Name="strCmpoPdre" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="strCmpoVncldo" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mci_ArchvdorVncldo" Relationship="SuiteModel.FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo" FromRole="mci_CmpoArchvdorVncldo" ToRole="mci_ArchvdorVncldo" />
+        </EntityType>
+        <EntityType Name="mci_PrmsoCmpo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdUsrio" Type="Int32" />
+          <Property Name="intIdGrpo" Type="Int32" />
+          <Property Name="intIdArchvdor" Type="Int32" Nullable="false" />
+          <Property Name="strCmpo" Type="String" Nullable="false" MaxLength="55" Unicode="false" FixedLength="false" />
+          <Property Name="strCndcnal" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strValor" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mci_Archvdor" Relationship="SuiteModel.FK_MCCI_PermisoCampo_MCCI_Archivador" FromRole="mci_PrmsoCmpo" ToRole="mci_Archvdor" />
+          <NavigationProperty Name="mcu_Grpo" Relationship="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Grupo" FromRole="mci_PrmsoCmpo" ToRole="mcu_Grpo" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Usuario" FromRole="mci_PrmsoCmpo" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mci_SbCnfigDcwre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strOrgnzcion" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strSrvdor" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="intPrto" Type="Int32" Nullable="false" />
+          <Property Name="strUsrio" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strCntrsna" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mci_TpoArchvdor" Relationship="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware" FromRole="mci_SbCnfigDcwre" ToRole="mci_TpoArchvdor" />
+        </EntityType>
+        <EntityType Name="mci_SbCnfigMcrclsaDcments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mci_TpoArchvdor" Relationship="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments" FromRole="mci_SbCnfigMcrclsaDcments" ToRole="mci_TpoArchvdor" />
+        </EntityType>
+        <EntityType Name="mci_SbCnfigShrePoint">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mci_TpoArchvdor" Relationship="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint" FromRole="mci_SbCnfigShrePoint" ToRole="mci_TpoArchvdor" />
+        </EntityType>
+        <EntityType Name="TipoArchivador">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdSubconfiguracion" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Archivadores" Relationship="SuiteModel.FK_MCCI_Archivador_MCCI_TipoArchivador" FromRole="mci_TpoArchvdor" ToRole="mci_Archvdor" />
+          <NavigationProperty Name="mci_SbCnfigDcwre" Relationship="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware" FromRole="mci_TpoArchvdor" ToRole="mci_SbCnfigDcwre" />
+          <NavigationProperty Name="mci_SbCnfigMcrclsaDcments" Relationship="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments" FromRole="mci_TpoArchvdor" ToRole="mci_SbCnfigMcrclsaDcments" />
+          <NavigationProperty Name="mci_SbCnfigShrePoint" Relationship="SuiteModel.FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint" FromRole="mci_TpoArchvdor" ToRole="mci_SbCnfigShrePoint" />
+        </EntityType>
+        <EntityType Name="mcu_AplccionUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" />
+          <Property Name="Aplicacion" Type="Binary" MaxLength="50" FixedLength="true" />
+          <NavigationProperty Name="mcu_MdloAplccion" Relationship="SuiteModel.FK_mcg_MdloAplccion_mcg_AplccionUsrio" FromRole="mcu_AplccionUsrio" ToRole="mcu_MdloAplccion" />
+        </EntityType>
+        <EntityType Name="mcu_CCsto">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strCdgo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_MCU_Usuario_MCU_CentroDeCosto" FromRole="mcu_CCsto" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mcu_Cdad">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdDprtmnto" Type="Int32" Nullable="false" />
+          <Property Name="strCdgo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Dprtmnto" Relationship="SuiteModel.FK_MCU_Ciudad_MCU_Departamento" FromRole="mcu_Cdad" ToRole="mcu_Dprtmnto" />
+          <NavigationProperty Name="mcu_Scrsal" Relationship="SuiteModel.FK_SysMCU_Sucursal_SysMCU_Ciudad" FromRole="mcu_Cdad" ToRole="mcu_Scrsal" />
+        </EntityType>
+        <EntityType Name="mcu_Dpndncia">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdEmprsa" Type="Int32" Nullable="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Emprsa" Relationship="SuiteModel.FK_MCU_Dependencia_MCU_Empresa" FromRole="mcu_Dpndncia" ToRole="mcu_Emprsa" />
+          <NavigationProperty Name="mcu_SbDpndncia" Relationship="SuiteModel.FK_MCU_SubDependencia_MCU_Dependencia" FromRole="mcu_Dpndncia" ToRole="mcu_SbDpndncia" />
+        </EntityType>
+        <EntityType Name="mcu_Dprtmnto">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdPais" Type="Int32" Nullable="false" />
+          <Property Name="strCdgo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Cdad" Relationship="SuiteModel.FK_MCU_Ciudad_MCU_Departamento" FromRole="mcu_Dprtmnto" ToRole="mcu_Cdad" />
+          <NavigationProperty Name="mcu_Pais" Relationship="SuiteModel.FK_MCU_Departamento_MCU_Pais" FromRole="mcu_Dprtmnto" ToRole="mcu_Pais" />
+        </EntityType>
+        <EntityType Name="mcu_Emprsa">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strNit" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Dpndncia" Relationship="SuiteModel.FK_MCU_Dependencia_MCU_Empresa" FromRole="mcu_Emprsa" ToRole="mcu_Dpndncia" />
+        </EntityType>
+        <EntityType Name="mcu_Grpo">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strDscrpcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mci_ArchvdresGrpo" Relationship="SuiteModel.FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo" FromRole="mcu_Grpo" ToRole="mci_ArchvdresGrpo" />
+          <NavigationProperty Name="mci_PrmsoCmpo" Relationship="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Grupo" FromRole="mcu_Grpo" ToRole="mci_PrmsoCmpo" />
+          <NavigationProperty Name="mcu_GrpoUsrio" Relationship="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Grupo" FromRole="mcu_Grpo" ToRole="mcu_GrpoUsrio" />
+        </EntityType>
+        <EntityType Name="mcu_GrpoUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdGrpo" Type="Int32" Nullable="false" />
+          <Property Name="intIdUsrio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="mcu_Grpo" Relationship="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Grupo" FromRole="mcu_GrpoUsrio" ToRole="mcu_Grpo" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Usuario" FromRole="mcu_GrpoUsrio" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mcu_MdloAplccion">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" />
+          <Property Name="intIdAplccion" Type="Int32" />
+          <Property Name="strNmbre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strDscrpcion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_AplccionUsrio" Relationship="SuiteModel.FK_mcg_MdloAplccion_mcg_AplccionUsrio" FromRole="mcu_MdloAplccion" ToRole="mcu_AplccionUsrio" />
+        </EntityType>
+        <EntityType Name="mcu_MdloUsrio">
+          <Key>
+            <PropertyRef Name="intIdUrio" />
+          </Key>
+          <Property Name="intIdUrio" Type="Int32" Nullable="false" />
+          <Property Name="Modulos" Type="Binary" MaxLength="50" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="mcu_Pais">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strCdgo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Dprtmnto" Relationship="SuiteModel.FK_MCU_Departamento_MCU_Pais" FromRole="mcu_Pais" ToRole="mcu_Dprtmnto" />
+        </EntityType>
+        <EntityType Name="mcu_SbDpndncia">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdDpndncia" Type="Int32" Nullable="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Dpndncia" Relationship="SuiteModel.FK_MCU_SubDependencia_MCU_Dependencia" FromRole="mcu_SbDpndncia" ToRole="mcu_Dpndncia" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_MCU_Usuario_MCU_SubDependencia" FromRole="mcu_SbDpndncia" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mcu_Scrsal">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdCdad" Type="Int32" Nullable="false" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Cdad" Relationship="SuiteModel.FK_SysMCU_Sucursal_SysMCU_Ciudad" FromRole="mcu_Scrsal" ToRole="mcu_Cdad" />
+          <NavigationProperty Name="mcu_ScrslesUsrio" Relationship="SuiteModel.FK_MCU_SucursalesUsuario_MCU_Sucursal" FromRole="mcu_Scrsal" ToRole="mcu_ScrslesUsrio" />
+        </EntityType>
+        <EntityType Name="mcu_ScrslesUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdUsrio" Type="Int32" Nullable="false" />
+          <Property Name="intIdScrsal" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="mcu_Scrsal" Relationship="SuiteModel.FK_MCU_SucursalesUsuario_MCU_Sucursal" FromRole="mcu_ScrslesUsrio" ToRole="mcu_Scrsal" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_mcu_ScrslesUsrio_mcu_Usrio" FromRole="mcu_ScrslesUsrio" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mcu_SgntreUsrio">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="intIdUsrio" Type="Int32" Nullable="false" />
+          <Property Name="blobSgntre" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_mcu_SgntreUsrio_mcu_Usrio" FromRole="mcu_SgntreUsrio" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="mcu_TpoIdntfccion">
+          <Key>
+            <PropertyRef Name="intId" />
+          </Key>
+          <Property Name="intId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strNmbre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strDscrpcion" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="mcu_Usrio" Relationship="SuiteModel.FK_MCU_Usuario_MCU_TipoIdentificacion" FromRole="mcu_TpoIdntfccion" ToRole="mcu_Usrio" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Clave" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="IdTipoIdentificacion" Type="Int32" />
+          <Property Name="Identificacion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
+          <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Telefono" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Cargo" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="IdSubdependencia" Type="Int32" />
+          <Property Name="IdCentroDeCostos" Type="Int32" />
+          <Property Name="IdUsuarioJefe" Type="Int32" />
+          <NavigationProperty Name="ArchivadoresUsuario" Relationship="SuiteModel.FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario" FromRole="mcu_Usrio" ToRole="mci_ArchvdresUsrio" />
+          <NavigationProperty Name="mci_PrmsoCmpo" Relationship="SuiteModel.FK_MCCI_PermisoCampo_SysMCU_Usuario" FromRole="mcu_Usrio" ToRole="mci_PrmsoCmpo" />
+          <NavigationProperty Name="mcu_CCsto" Relationship="SuiteModel.FK_MCU_Usuario_MCU_CentroDeCosto" FromRole="mcu_Usrio" ToRole="mcu_CCsto" />
+          <NavigationProperty Name="mcu_GrpoUsrio" Relationship="SuiteModel.FK_SysMCU_GruposUsuario_SysMCU_Usuario" FromRole="mcu_Usrio" ToRole="mcu_GrpoUsrio" />
+          <NavigationProperty Name="mcu_SbDpndncia" Relationship="SuiteModel.FK_MCU_Usuario_MCU_SubDependencia" FromRole="mcu_Usrio" ToRole="mcu_SbDpndncia" />
+          <NavigationProperty Name="mcu_ScrslesUsrio" Relationship="SuiteModel.FK_mcu_ScrslesUsrio_mcu_Usrio" FromRole="mcu_Usrio" ToRole="mcu_ScrslesUsrio" />
+          <NavigationProperty Name="mcu_SgntreUsrio" Relationship="SuiteModel.FK_mcu_SgntreUsrio_mcu_Usrio" FromRole="mcu_Usrio" ToRole="mcu_SgntreUsrio" />
+          <NavigationProperty Name="mcu_TpoIdntfccion" Relationship="SuiteModel.FK_MCU_Usuario_MCU_TipoIdentificacion" FromRole="mcu_Usrio" ToRole="mcu_TpoIdntfccion" />
+          <NavigationProperty Name="mcu_Usrio1" Relationship="SuiteModel.FK_MCU_Usuario_MCU_Usuario" FromRole="mcu_Usrio" ToRole="mcu_Usrio1" />
+          <NavigationProperty Name="mcu_Usrio2" Relationship="SuiteModel.FK_MCU_Usuario_MCU_Usuario" FromRole="mcu_Usrio1" ToRole="mcu_Usrio" />
+        </EntityType>
+        <Association Name="FK_MCCI_Archivador_MCCI_TipoArchivador">
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.TipoArchivador" Multiplicity="0..1" />
+          <End Role="mci_Archvdor" Type="SuiteModel.Archivador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_TpoArchvdor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_Archvdor">
+              <PropertyRef Name="IdTipoArchivador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresGrupo_MCCI_Archivador">
+          <End Role="mci_Archvdor" Type="SuiteModel.Archivador" Multiplicity="1" />
+          <End Role="mci_ArchvdresGrpo" Type="SuiteModel.mci_ArchvdresGrpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresGrpo">
+              <PropertyRef Name="intIdArchvdor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresUsuario_MCCI_Archivador">
+          <End Role="mci_Archvdor" Type="SuiteModel.Archivador" Multiplicity="1" />
+          <End Role="mci_ArchvdresUsrio" Type="SuiteModel.ArchivadoresUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresUsrio">
+              <PropertyRef Name="IdArchivador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_PermisoCampo_MCCI_Archivador">
+          <End Role="mci_Archvdor" Type="SuiteModel.Archivador" Multiplicity="1" />
+          <End Role="mci_PrmsoCmpo" Type="SuiteModel.mci_PrmsoCmpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_PrmsoCmpo">
+              <PropertyRef Name="intIdArchvdor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mci_ArchvdorVncldo_mci_Archvdor">
+          <End Role="mci_Archvdor" Type="SuiteModel.Archivador" Multiplicity="1" />
+          <End Role="mci_ArchvdorVncldo" Type="SuiteModel.mci_ArchvdorVncldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_Archvdor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_ArchvdorVncldo">
+              <PropertyRef Name="intIdArchvdorPdre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mci_CmpoArchvdorVncldo_mci_ArchvdorVncldo">
+          <End Role="mci_ArchvdorVncldo" Type="SuiteModel.mci_ArchvdorVncldo" Multiplicity="1" />
+          <End Role="mci_CmpoArchvdorVncldo" Type="SuiteModel.mci_CmpoArchvdorVncldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_ArchvdorVncldo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_CmpoArchvdorVncldo">
+              <PropertyRef Name="intIdCnfgrcion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresGrupo_SysMCU_Grupo">
+          <End Role="mcu_Grpo" Type="SuiteModel.mcu_Grpo" Multiplicity="1" />
+          <End Role="mci_ArchvdresGrpo" Type="SuiteModel.mci_ArchvdresGrpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Grpo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresGrpo">
+              <PropertyRef Name="intIdGrpo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_ArchivadoresUsuario_SysMCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="1" />
+          <End Role="mci_ArchvdresUsrio" Type="SuiteModel.ArchivadoresUsuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_ArchvdresUsrio">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_PermisoCampo_SysMCU_Grupo">
+          <End Role="mcu_Grpo" Type="SuiteModel.mcu_Grpo" Multiplicity="0..1" />
+          <End Role="mci_PrmsoCmpo" Type="SuiteModel.mci_PrmsoCmpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Grpo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mci_PrmsoCmpo">
+              <PropertyRef Name="intIdGrpo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_PermisoCampo_SysMCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="0..1" />
+          <End Role="mci_PrmsoCmpo" Type="SuiteModel.mci_PrmsoCmpo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_PrmsoCmpo">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_TipoArchivador_MCCI_SubConfigDocuware">
+          <End Role="mci_SbCnfigDcwre" Type="SuiteModel.mci_SbCnfigDcwre" Multiplicity="1" />
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.TipoArchivador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_SbCnfigDcwre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_TpoArchvdor">
+              <PropertyRef Name="IdSubconfiguracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_TipoArchivador_MCCI_SubConfigMicrocolsaDocuments">
+          <End Role="mci_SbCnfigMcrclsaDcments" Type="SuiteModel.mci_SbCnfigMcrclsaDcments" Multiplicity="1" />
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.TipoArchivador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_SbCnfigMcrclsaDcments">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_TpoArchvdor">
+              <PropertyRef Name="IdSubconfiguracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCCI_TipoArchivador_MCCI_SubConfigSharePoint">
+          <End Role="mci_SbCnfigShrePoint" Type="SuiteModel.mci_SbCnfigShrePoint" Multiplicity="1" />
+          <End Role="mci_TpoArchvdor" Type="SuiteModel.TipoArchivador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mci_SbCnfigShrePoint">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mci_TpoArchvdor">
+              <PropertyRef Name="IdSubconfiguracion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mcg_MdloAplccion_mcg_AplccionUsrio">
+          <End Role="mcu_AplccionUsrio" Type="SuiteModel.mcu_AplccionUsrio" Multiplicity="0..1" />
+          <End Role="mcu_MdloAplccion" Type="SuiteModel.mcu_MdloAplccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_AplccionUsrio">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_MdloAplccion">
+              <PropertyRef Name="intIdAplccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_CentroDeCosto">
+          <End Role="mcu_CCsto" Type="SuiteModel.mcu_CCsto" Multiplicity="0..1" />
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_CCsto">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio">
+              <PropertyRef Name="IdCentroDeCostos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Ciudad_MCU_Departamento">
+          <End Role="mcu_Dprtmnto" Type="SuiteModel.mcu_Dprtmnto" Multiplicity="1" />
+          <End Role="mcu_Cdad" Type="SuiteModel.mcu_Cdad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Dprtmnto">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Cdad">
+              <PropertyRef Name="intIdDprtmnto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SysMCU_Sucursal_SysMCU_Ciudad">
+          <End Role="mcu_Cdad" Type="SuiteModel.mcu_Cdad" Multiplicity="1" />
+          <End Role="mcu_Scrsal" Type="SuiteModel.mcu_Scrsal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Cdad">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Scrsal">
+              <PropertyRef Name="intIdCdad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Dependencia_MCU_Empresa">
+          <End Role="mcu_Emprsa" Type="SuiteModel.mcu_Emprsa" Multiplicity="1" />
+          <End Role="mcu_Dpndncia" Type="SuiteModel.mcu_Dpndncia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Emprsa">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Dpndncia">
+              <PropertyRef Name="intIdEmprsa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_SubDependencia_MCU_Dependencia">
+          <End Role="mcu_Dpndncia" Type="SuiteModel.mcu_Dpndncia" Multiplicity="1" />
+          <End Role="mcu_SbDpndncia" Type="SuiteModel.mcu_SbDpndncia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Dpndncia">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_SbDpndncia">
+              <PropertyRef Name="intIdDpndncia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Departamento_MCU_Pais">
+          <End Role="mcu_Pais" Type="SuiteModel.mcu_Pais" Multiplicity="1" />
+          <End Role="mcu_Dprtmnto" Type="SuiteModel.mcu_Dprtmnto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Pais">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Dprtmnto">
+              <PropertyRef Name="intIdPais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SysMCU_GruposUsuario_SysMCU_Grupo">
+          <End Role="mcu_Grpo" Type="SuiteModel.mcu_Grpo" Multiplicity="1" />
+          <End Role="mcu_GrpoUsrio" Type="SuiteModel.mcu_GrpoUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Grpo">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_GrpoUsrio">
+              <PropertyRef Name="intIdGrpo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SysMCU_GruposUsuario_SysMCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="1" />
+          <End Role="mcu_GrpoUsrio" Type="SuiteModel.mcu_GrpoUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mcu_GrpoUsrio">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_SubDependencia">
+          <End Role="mcu_SbDpndncia" Type="SuiteModel.mcu_SbDpndncia" Multiplicity="0..1" />
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_SbDpndncia">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio">
+              <PropertyRef Name="IdSubdependencia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_SucursalesUsuario_MCU_Sucursal">
+          <End Role="mcu_Scrsal" Type="SuiteModel.mcu_Scrsal" Multiplicity="1" />
+          <End Role="mcu_ScrslesUsrio" Type="SuiteModel.mcu_ScrslesUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Scrsal">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_ScrslesUsrio">
+              <PropertyRef Name="intIdScrsal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mcu_ScrslesUsrio_mcu_Usrio">
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="1" />
+          <End Role="mcu_ScrslesUsrio" Type="SuiteModel.mcu_ScrslesUsrio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mcu_ScrslesUsrio">
+              <PropertyRef Name="intIdUsrio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_mcu_SgntreUsrio_mcu_Usrio">
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="1" />
+          <End Role="mcu_SgntreUsrio" Type="SuiteModel.mcu_SgntreUsrio" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mcu_SgntreUsrio">
+              <PropertyRef Name="intId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_TipoIdentificacion">
+          <End Role="mcu_TpoIdntfccion" Type="SuiteModel.mcu_TpoIdntfccion" Multiplicity="0..1" />
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_TpoIdntfccion">
+              <PropertyRef Name="intId" />
+            </Principal>
+            <Dependent Role="mcu_Usrio">
+              <PropertyRef Name="IdTipoIdentificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MCU_Usuario_MCU_Usuario">
+          <End Role="mcu_Usrio" Type="SuiteModel.Usuario" Multiplicity="0..1" />
+          <End Role="mcu_Usrio1" Type="SuiteModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="mcu_Usrio">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="mcu_Usrio1">
+              <PropertyRef Name="IdUsuarioJefe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SuiteModelStoreContainer" CdmEntityContainer="SuiteEntities">
+          <EntitySetMapping Name="mci_Archvdor">
+            <EntityTypeMapping TypeName="SuiteModel.Archivador">
+              <MappingFragment StoreEntitySet="mci_Archvdor">
+                <ScalarProperty Name="Id" ColumnName="intId" />
+                <ScalarProperty Name="IdTipoArchivador" ColumnName="intIdTpoArchvdor" />
+                <ScalarProperty Name="Nombre" ColumnName="strNmbre" />
+                <ScalarProperty Name="TituloArchivador" ColumnName="strTtloArchvdor" />
+                <ScalarProperty Name="FormatoFechaEntrada" ColumnName="strFrmtoFchaEntrda" />
+                <ScalarProperty Name="FormatoFechaSalida" ColumnName="strFrmtoFchaSlda" />
+                <ScalarProperty Name="MostrarFormularioConsulta" ColumnName="intMstrarFrmlrioCnslta" />
+                <ScalarProperty Name="CampoOrdenacion" ColumnName="strCmpoOrdncion" />
+                <ScalarProperty Name="QueryAdicional" ColumnName="strQryAdcnal" />
+                <ScalarProperty Name="ListaCamposSubconsulta" ColumnName="strLstaCmposSbCnslta" />
+                <ScalarProperty Name="QueryAdicionalSubconsulta" ColumnName="strQryAdcnalSbCnslta" />
+                <ScalarProperty Name="CamposOcultar" ColumnName="strCmposOcltar" />
+                <ScalarProperty Name="CamposOcultarFormulario" ColumnName="strCmposOcltarFrmlrio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_ArchvdorVncldo">
+            <EntityTypeMapping TypeName="SuiteModel.mci_ArchvdorVncldo">
+              <MappingFragment StoreEntitySet="mci_ArchvdorVncldo">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdCnfgrcion" ColumnName="intIdCnfgrcion" />
+                <ScalarProperty Name="intIdArchvdorPdre" ColumnName="intIdArchvdorPdre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_ArchvdresGrpo">
+            <EntityTypeMapping TypeName="SuiteModel.mci_ArchvdresGrpo">
+              <MappingFragment StoreEntitySet="mci_ArchvdresGrpo">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdArchvdor" ColumnName="intIdArchvdor" />
+                <ScalarProperty Name="intIdGrpo" ColumnName="intIdGrpo" />
+                <ScalarProperty Name="intHbltdo" ColumnName="intHbltdo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_ArchvdresUsrio">
+            <EntityTypeMapping TypeName="SuiteModel.ArchivadoresUsuario">
+              <MappingFragment StoreEntitySet="mci_ArchvdresUsrio">
+                <ScalarProperty Name="Id" ColumnName="intId" />
+                <ScalarProperty Name="IdArchivador" ColumnName="intIdArchvdor" />
+                <ScalarProperty Name="IdUsuario" ColumnName="intIdUsrio" />
+                <ScalarProperty Name="Habilitado" ColumnName="intHbltdo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_CmpoArchvdorVncldo">
+            <EntityTypeMapping TypeName="SuiteModel.mci_CmpoArchvdorVncldo">
+              <MappingFragment StoreEntitySet="mci_CmpoArchvdorVncldo">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdCnfgrcion" ColumnName="intIdCnfgrcion" />
+                <ScalarProperty Name="intIdArchvdorVncldo" ColumnName="intIdArchvdorVncldo" />
+                <ScalarProperty Name="strCmpoPdre" ColumnName="strCmpoPdre" />
+                <ScalarProperty Name="strCmpoVncldo" ColumnName="strCmpoVncldo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_PrmsoCmpo">
+            <EntityTypeMapping TypeName="SuiteModel.mci_PrmsoCmpo">
+              <MappingFragment StoreEntitySet="mci_PrmsoCmpo">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdUsrio" ColumnName="intIdUsrio" />
+                <ScalarProperty Name="intIdGrpo" ColumnName="intIdGrpo" />
+                <ScalarProperty Name="intIdArchvdor" ColumnName="intIdArchvdor" />
+                <ScalarProperty Name="strCmpo" ColumnName="strCmpo" />
+                <ScalarProperty Name="strCndcnal" ColumnName="strCndcnal" />
+                <ScalarProperty Name="strValor" ColumnName="strValor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_SbCnfigDcwre">
+            <EntityTypeMapping TypeName="SuiteModel.mci_SbCnfigDcwre">
+              <MappingFragment StoreEntitySet="mci_SbCnfigDcwre">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="strOrgnzcion" ColumnName="strOrgnzcion" />
+                <ScalarProperty Name="strSrvdor" ColumnName="strSrvdor" />
+                <ScalarProperty Name="intPrto" ColumnName="intPrto" />
+                <ScalarProperty Name="strUsrio" ColumnName="strUsrio" />
+                <ScalarProperty Name="strCntrsna" ColumnName="strCntrsna" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_SbCnfigMcrclsaDcments">
+            <EntityTypeMapping TypeName="SuiteModel.mci_SbCnfigMcrclsaDcments">
+              <MappingFragment StoreEntitySet="mci_SbCnfigMcrclsaDcments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_SbCnfigShrePoint">
+            <EntityTypeMapping TypeName="SuiteModel.mci_SbCnfigShrePoint">
+              <MappingFragment StoreEntitySet="mci_SbCnfigShrePoint">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mci_TpoArchvdor">
+            <EntityTypeMapping TypeName="SuiteModel.TipoArchivador">
+              <MappingFragment StoreEntitySet="mci_TpoArchvdor">
+                <ScalarProperty Name="Id" ColumnName="intId" />
+                <ScalarProperty Name="IdSubconfiguracion" ColumnName="IdSbCnfgrcion" />
+                <ScalarProperty Name="Nombre" ColumnName="strNmbre" />
+                <ScalarProperty Name="Descripcion" ColumnName="strDscrpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_AplccionUsrio">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_AplccionUsrio">
+              <MappingFragment StoreEntitySet="mcu_AplccionUsrio">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="Aplicacion" ColumnName="Aplicacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_CCsto">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_CCsto">
+              <MappingFragment StoreEntitySet="mcu_CCsto">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="strCdgo" ColumnName="strCdgo" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Cdad">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Cdad">
+              <MappingFragment StoreEntitySet="mcu_Cdad">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdDprtmnto" ColumnName="intIdDprtmnto" />
+                <ScalarProperty Name="strCdgo" ColumnName="strCdgo" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Dpndncia">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Dpndncia">
+              <MappingFragment StoreEntitySet="mcu_Dpndncia">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdEmprsa" ColumnName="intIdEmprsa" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Dprtmnto">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Dprtmnto">
+              <MappingFragment StoreEntitySet="mcu_Dprtmnto">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdPais" ColumnName="intIdPais" />
+                <ScalarProperty Name="strCdgo" ColumnName="strCdgo" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Emprsa">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Emprsa">
+              <MappingFragment StoreEntitySet="mcu_Emprsa">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="strNit" ColumnName="strNit" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Grpo">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Grpo">
+              <MappingFragment StoreEntitySet="mcu_Grpo">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+                <ScalarProperty Name="strDscrpcion" ColumnName="strDscrpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_GrpoUsrio">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_GrpoUsrio">
+              <MappingFragment StoreEntitySet="mcu_GrpoUsrio">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdGrpo" ColumnName="intIdGrpo" />
+                <ScalarProperty Name="intIdUsrio" ColumnName="intIdUsrio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_MdloAplccion">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_MdloAplccion">
+              <MappingFragment StoreEntitySet="mcu_MdloAplccion">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdAplccion" ColumnName="intIdAplccion" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+                <ScalarProperty Name="strDscrpcion" ColumnName="strDscrpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_MdloUsrio">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_MdloUsrio">
+              <MappingFragment StoreEntitySet="mcu_MdloUsrio">
+                <ScalarProperty Name="intIdUrio" ColumnName="intIdUrio" />
+                <ScalarProperty Name="Modulos" ColumnName="Modulos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Pais">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Pais">
+              <MappingFragment StoreEntitySet="mcu_Pais">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="strCdgo" ColumnName="strCdgo" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_SbDpndncia">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_SbDpndncia">
+              <MappingFragment StoreEntitySet="mcu_SbDpndncia">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdDpndncia" ColumnName="intIdDpndncia" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Scrsal">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_Scrsal">
+              <MappingFragment StoreEntitySet="mcu_Scrsal">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdCdad" ColumnName="intIdCdad" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_ScrslesUsrio">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_ScrslesUsrio">
+              <MappingFragment StoreEntitySet="mcu_ScrslesUsrio">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdUsrio" ColumnName="intIdUsrio" />
+                <ScalarProperty Name="intIdScrsal" ColumnName="intIdScrsal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_SgntreUsrio">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_SgntreUsrio">
+              <MappingFragment StoreEntitySet="mcu_SgntreUsrio">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="intIdUsrio" ColumnName="intIdUsrio" />
+                <ScalarProperty Name="blobSgntre" ColumnName="blobSgntre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_TpoIdntfccion">
+            <EntityTypeMapping TypeName="SuiteModel.mcu_TpoIdntfccion">
+              <MappingFragment StoreEntitySet="mcu_TpoIdntfccion">
+                <ScalarProperty Name="intId" ColumnName="intId" />
+                <ScalarProperty Name="strNmbre" ColumnName="strNmbre" />
+                <ScalarProperty Name="strDscrpcion" ColumnName="strDscrpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mcu_Usrio">
+            <EntityTypeMapping TypeName="SuiteModel.Usuario">
+              <MappingFragment StoreEntitySet="mcu_Usrio">
+                <ScalarProperty Name="Id" ColumnName="intId" />
+                <ScalarProperty Name="Login" ColumnName="strLgin" />
+                <ScalarProperty Name="Clave" ColumnName="strCntrsna" />
+                <ScalarProperty Name="Nombre" ColumnName="strNmbre" />
+                <ScalarProperty Name="IdTipoIdentificacion" ColumnName="intIdTpoIdntfccion" />
+                <ScalarProperty Name="Identificacion" ColumnName="strIdntfccion" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="dtFchaNcmnto" />
+                <ScalarProperty Name="Email" ColumnName="strEmail" />
+                <ScalarProperty Name="Telefono" ColumnName="strTlfno" />
+                <ScalarProperty Name="Cargo" ColumnName="strCrgo" />
+                <ScalarProperty Name="IdSubdependencia" ColumnName="intIdSbDpndncia" />
+                <ScalarProperty Name="IdCentroDeCostos" ColumnName="intIdCntroDCsto" />
+                <ScalarProperty Name="IdUsuarioJefe" ColumnName="intIdUsrioJfe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

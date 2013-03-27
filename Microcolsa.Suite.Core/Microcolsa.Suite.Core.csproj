@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB4414DB-BC35-4C9F-9ECB-6380ADDD0E4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microcolsa.Suite.Core</RootNamespace>
+    <AssemblyName>Microcolsa.Suite.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Archivador.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArchivadoresUsuario.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaInternet\Archivador.cs" />
+    <Compile Include="General\Usuario.cs" />
+    <Compile Include="mci_ArchvdorVncldo.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mci_ArchvdresGrpo.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mci_CmpoArchvdorVncldo.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mci_PrmsoCmpo.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mci_SbCnfigDcwre.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mci_SbCnfigMcrclsaDcments.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mci_SbCnfigShrePoint.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_AplccionUsrio.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_CCsto.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Cdad.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Dpndncia.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Dprtmnto.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Emprsa.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Grpo.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_GrpoUsrio.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_MdloAplccion.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_MdloUsrio.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Pais.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_SbDpndncia.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_Scrsal.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_ScrslesUsrio.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_SgntreUsrio.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mcu_TpoIdntfccion.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuiteContext.cs" />
+    <Compile Include="SuiteModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuiteModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuiteModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SuiteModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuiteModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TipoArchivador.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>SuiteModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SuiteModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SuiteModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="SuiteModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SuiteModel.edmx</DependentUpon>
+      <LastGenOutput>SuiteModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SuiteModel.edmx.diagram">
+      <DependentUpon>SuiteModel.edmx</DependentUpon>
+    </None>
+    <None Include="SuiteModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SuiteModel.edmx</DependentUpon>
+      <LastGenOutput>SuiteModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Correspondencia\" />
+    <Folder Include="Workflow\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
